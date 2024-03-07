@@ -4,9 +4,9 @@ import Spheres from "../spheres/spheres";
 
 const Background = () => {
     return (
-        <Canvas style={{ width: '100%', height: '100vh' }}>
-            <ambientLight />
-            <pointLight position={[10, 10, 10]} />
+        <Canvas style={{ width: '100%', height: '100vh', background: '#1e1e1e' }}>
+            <ambientLight intensity={1}/>
+            <directionalLight position={[1, 1, 1]} intensity={2} />
             <OrbitControls />
             <Spheres numSpheres={20} />
         </Canvas>
