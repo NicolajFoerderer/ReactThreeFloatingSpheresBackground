@@ -3,7 +3,7 @@ import * as THREE from "three";
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 
-type SphereRef = React.Ref<THREE.Mesh>;
+type SphereRef = React.MutableRefObject<THREE.Mesh>;
 
 const Spheres = ({ numSpheres }: { numSpheres: number }) => {
   const spheres = useRef<SphereRef[]>([]);
